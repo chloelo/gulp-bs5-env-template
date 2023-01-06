@@ -1,4 +1,4 @@
-@import "../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/functions";
 
 // 第二種是直接去copy node modules 的 variables.scss 檔到 src 資料夾，改寫客製
 @import './helpers/variables';
@@ -12,6 +12,6 @@
 // @import "../../node_modules/bootstrap/scss/variables";
 
 
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import './pages/login'

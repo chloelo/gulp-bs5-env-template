@@ -27,4 +27,10 @@ function layoutHTML(){
   )
   .pipe(dest('./dist'))
 }
+
+function vendorsJs() {
+  return src(envOptions.vendors.src)
+    .pipe($.concat(envOptions.vendors.concat))
+    .pipe(dest(envOptions.vendors.path));
+}
 exports.default = series(layoutHTML, buildStyles, watchTasks);
