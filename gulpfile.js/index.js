@@ -51,31 +51,6 @@ function buildStyles() {
     );
 }
 
-// function sass() {
-//   const plugins = [
-//     autoprefixer(),
-//   ];
-//   return gulp.src(envOptions.style.src)
-//     .pipe($.sourcemaps.init())
-//     .pipe($.sass({
-//       outputStyle: envOptions.style.outputStyle,
-//     }).on('error', $.sass.logError))
-//     .pipe($.postcss(plugins))
-//     .pipe($.sourcemaps.write('.'))
-//     .pipe(gulp.dest(envOptions.style.path))
-//     .pipe(
-//       browserSync.reload({
-//         stream: true,
-//       }),
-//     );
-// }
-
-// function compileBootstrap() {
-//   return gulp.src(envOptions.style.bsSrc)
-//     .pipe($.sass().on('error', $.sass.logError))
-//     .pipe(gulp.dest(envOptions.style.path))
-// }
-
 function babel() {
   return src(envOptions.javascript.src)
     // .pipe($.sourcemaps.init())
