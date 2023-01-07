@@ -31,6 +31,7 @@
     "gulp-postcss": "^9.0.1"
   },
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "gulp-gh-pages": "^0.5.4"
   }
 }

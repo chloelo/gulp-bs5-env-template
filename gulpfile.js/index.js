@@ -91,10 +91,10 @@ function clean() {
     .pipe($.clean());
 }
 
-// function deploy() {
-//   return src(envOptions.deploySrc)
-//     .pipe($.ghPages());
-// }
+function deploy() {
+  return src(envOptions.deploySrc)
+    .pipe($.ghPages());
+}
 
 function watchTasks() {
   watch(envOptions.html.src, series(layoutHTML));
@@ -104,7 +104,7 @@ function watchTasks() {
   watch(envOptions.style.src, series(buildStyles));
 }
 
-// exports.deploy = deploy;
+exports.deploy = deploy;
 
 exports.clean = clean;
 
