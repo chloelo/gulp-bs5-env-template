@@ -5,74 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%- title %></title>
+    <script
+      src="https://kit.fontawesome.com/b3b219037e.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/style/all.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
+    <nav class="main-nav fixed-bottom bg-secondary text-primary container-fluid p-0">
+      <ul class="list-unstyled row g-0 mb-0">
+        <li class="col">
+          <a href="side-menu.html" class="main-nav__item d-flex flex-column text-center <% if (current === 'nav-link01') {%>main-nav__item--active<%} %>">
+            <i class="fa-solid fa-house"></i>
+            <span>用電分析 </span>
+          </a>
+        </li>
+        <li class="col">
+          <a href="table.html" class="main-nav__item d-flex flex-column text-center <% if (current === 'nav-link02') {%>main-nav__item--active<%} %>">
+            <i class="fa-solid fa-user"></i>
+            <span>用水分析 </span>
+          </a>
+        </li>
+        <li class="col">
+          <a href="index.html" class="main-nav__item d-flex flex-column text-center <% if (current === 'index') {%>main-nav__item--active<%} %>">
+            <i class="fa-brands fa-github"></i>
+            <span>首頁 </span>
+          </a>
+        </li>
+        <li class="col">
+          <a href="" class="main-nav__item d-flex flex-column text-center <% if (current === 'nav-link04') {%>main-nav__item--active<%} %>">
+            <i class="fa-solid fa-music"></i>
+            <span>設備列表 </span>
+          </a>
+        </li>
+        <li class="col">
+          <a href="" class="main-nav__item d-flex flex-column text-center <% if (current === 'nav-link05') {%>main-nav__item--active<%} %>">
+            <i class="fa-solid fa-heart"></i>
+            <span>歷年用電 </span>
+          </a>
+        </li>
+      </ul>
     </nav>
     <%- contents %>
     <footer>footer</footer>
